@@ -1,0 +1,15 @@
+.list__border{
+    width: 8%;
+    background: #FFFFFF;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+.context-p p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.list__content{
+    margin: 30px 60px;
+}

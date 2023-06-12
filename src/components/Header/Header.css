@@ -1,0 +1,24 @@
+p{
+    font-weight: 500;
+    font-size: 22px;
+}
+#one{
+    color: #2975FF;
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  
+}
+h1{
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 56px;
+
+color: #1A202C;
+width: 20%;
+}
+.content{
+    margin: 30px 50px;
+    
+}
