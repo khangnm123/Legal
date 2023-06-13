@@ -1,35 +1,38 @@
 import { useState } from 'react';
 import FaqContent from '../FaqContent';
 import Header from '../Header/Header';
-import ListContent from '../List/ListContent';
 function ContentData() {
   const [list , setList] = useState(
   [
     {
-      question:"1. How do I place an order on your website?",
-      answer:"All you need to do to place an order on our wesbite is to choose the product that you would like to buy, then add it to cart and pay for it using any of the supported payment methods.",
+      question:"1.1 Our Terms & Conditions",
+      answer:"Here you can put any text that you think would be suitable and relevant to this particular section of the website.",
       active : 1
     },
     {
-      question:"2. What is your return policy?",
-      answer:"A return policy indicates rules and conditions about if, when, and for how long your customers can return a purchase and receive reimbursement. It includes information about how long your customer has to make the return and which items are included or excluded from the policy."
+      question:"1.2 Collection of personal data",
+      answer:"This place is reserved for you to put some text content that you think would make sense here."
     },
     {
-      question:"3. Do you offer an option to send a product as a gift?",
-      answer:"All you need to do to place an order on our wesbite is to choose the product that you would like to buy, then add it to cart and pay for it using any of the supported payment methods.."
-    }
+      question:"1.3 Purpose of collection of personal data",
+      answer:"Here you can put any text that you think would be suitable and relevant to this particular section of the website."
+    },
+     {
+      question:"1.4 Usage of your personal data",
+      answer:"This place is reserved for you to put some text content that you think would make sense here."
+    },
 
   ]
   );
 const [check , setCheck] =useState(
   [
     {
-      question:"1. What payment methods do you accept?",
+      question:"2.1 Different payment methods on our website?",
       answer:"All you need to do to place an order on our wesbite is to choose the product that you would like to buy, then add it to cart and pay for it using any of the supported payment methods.",
       active : 1
     },
     {
-      question:"2. Do you offer an option to pay for the product over time?",
+      question:"2.2 Our right to cancel your payment?",
       answer:"Yes, we do. We have partnered with a few companies that offer such option."
     },
   ]
@@ -37,52 +40,38 @@ const [check , setCheck] =useState(
   const [shop , setShop] =useState(
     [
       {
-        question:"1. Do I have to pay for the shipping?",
+        question:"3.1 Order processing on our website",
         answer:"All you need to do to place an order on our wesbite is to choose the product that you would like to buy, then add it to cart and pay for it using any of the supported payment methods.",
         active : 1
       },
       {
-        question:"2. How long does it take for you to dispatch my order?",
+        question:"3.2 Dispatch and shipping times for different types of orders",
         answer:"Yes, we do. We have partnered with a few companies that offer such option."
       },
       {
-        question:"3. What shipping company do you use?",
-        answer:"Yes, we do. We have partnered with a few companies that offer such option."
-      },
-      {
-        question:"4. How long does it usually take for my order to arrive?",
-        answer:"Yes, we do. We have partnered with a few companies that offer such option."
+        question:"3.3 Return and refund policies for all online orders",
+        answer:"All you need to do is to put your own text here and that is going to be it, all done. This section can be used for really long pieces of text that explain a lot of small details that are required."
       },
     ]
     );
     const [discount , setDiscount] =useState(
       [
         {
-          question:"1. Do you offer any discounts on your website?",
+          question:"4.1 Our right to change Terms & Conditions",
           answer:"All you need to do to place an order on our wesbite is to choose the product that you would like to buy, then add it to cart and pay for it using any of the supported payment methods.",
           active : 1
         },
+        {
+          question:"4.2 Notice of change in Terms & Conditions",
+          answer:"All you need to do to place an order on our wesbite is to choose the product that you would like to buy, then add it to cart and pay for it using any of the supported payment methods.",
+          active : 1
+        }
       ]
       );
-      const [other , setOther] =useState(
-        [
-          {
-            question:"1. Where can I find the reviews?",
-            answer:"Please visit our reviews page to find out more about that.",
-            active : 1
-          },
-          {
-            question:"2. How do I contact you?",
-            answer:"Please visit our reviews page to find out more about that.",
-            active : 1
-          }
-        ]
-        );
   return (
     <div className="bg-[#FFFFFF] h-screen mx-10">
       <div><Header/></div>
-      <div><ListContent/></div>
-      <div><h1 className=' mx-10 text-3xl'>General</h1></div>
+      <div><h1 className=' mx-10 text-3xl'>1. Introduction</h1></div>
         {/* Begin */}
         <div className='list flex  justify-between mx-40 flex-wrap w-full'>
          {list.map((item , key) =>(
@@ -91,7 +80,7 @@ const [check , setCheck] =useState(
         </div>
         <div className='checkout-content'>
           <div>
-            <h2 className=' mx-10 text-3xl font-bold m-4'>Check Out</h2>
+            <h2 className=' mx-10 text-3xl font-bold m-4'>2. Payment Terms</h2>
           </div>
           <div className='list flex  justify-between mx-40 flex-wrap w-full'>
              {check.map((item , key) =>(
@@ -101,7 +90,7 @@ const [check , setCheck] =useState(
         </div>
           <div className='shopping'>
             <div>
-              <h2 className=' mx-10 text-3xl font-bold m-4'>Shopping</h2>
+              <h2 className=' mx-10 text-3xl font-bold m-4'>3. Orders</h2>
           </div>
           <div className='list flex  justify-between mx-40 flex-wrap w-full'>
               {shop.map((item , key) =>(
@@ -111,20 +100,10 @@ const [check , setCheck] =useState(
           </div>
           <div className='discount-shop'>
           <div>
-              <h2 className=' mx-10 text-3xl font-bold m-4'>Shopping</h2>
+              <h2 className=' mx-10 text-3xl font-bold m-4'>4. Changes</h2>
           </div>
                 <div className='list flex  justify-between mx-40 flex-wrap w-full' >
               {discount.map((item , key) =>(
-                <FaqContent key={key} datas={item} />
-             ))}
-          </div>
-          </div>
-          <div className='other-shop'>
-          <div>
-              <h2 className=' mx-10 text-3xl font-bold m-4'>Other</h2>
-          </div>
-                <div className='list flex  justify-between mx-40 flex-wrap w-full'>
-              {other.map((item , key) =>(
                 <FaqContent key={key} datas={item} />
              ))}
           </div>

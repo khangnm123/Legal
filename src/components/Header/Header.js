@@ -3,10 +3,10 @@ import './Header.css'
 const Header = () => {
   return (
     <div className='content'>
-      <p>HomePage > Categories > FAQ Page</p>
+      <p>HomePage > Categories > Terms and Conditions</p>
         <p id='one'><i>- Find the Answers</i></p>
         <h1>
-         Frequently Asked Questions
+        Hygge - Terms and Conditions
         </h1>
     </div>
   )
